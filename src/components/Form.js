@@ -16,7 +16,7 @@ const Forms = () => {
     e.preventDefault();
     const storedAuthorData = JSON.parse(localStorage.getItem('AuthorsBooks')) || [];
     storedAuthorData.push(authorData);
-    // localStorage.setItem('AuthorsBooks', JSON.stringify(storedAuthorData));
+    localStorage.setItem('AuthorsBooks', JSON.stringify(storedAuthorData));
   };
   return (
     <div className="form-container">
