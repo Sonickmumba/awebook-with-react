@@ -14,7 +14,7 @@ const Forms = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    // const storedAuthorData = JSON.parse(localStorage.getItem('AuthorsBooks')) || [];
+    const storedAuthorData = JSON.parse(localStorage.getItem('AuthorsBooks')) || [];
     // storedAuthorData.push(authorData);
     // localStorage.setItem('AuthorsBooks', JSON.stringify(storedAuthorData));
   };
