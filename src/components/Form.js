@@ -5,6 +5,7 @@ const Forms = () => {
   });
 
   const handleInputChange = (e) => {
+    e.preventDefault();
     const { name, value } = e.target;
     setAuthorData({
       ...authorData,
