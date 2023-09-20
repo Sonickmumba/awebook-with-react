@@ -20,7 +20,7 @@ const Forms = () => {
   return (
     <div className="form-container">
       <h2>
-        { a }
+        
       </h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
