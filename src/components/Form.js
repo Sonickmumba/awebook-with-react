@@ -13,7 +13,6 @@ const Forms = () => {
             type="text"
             id="authorName"
             name="authorName"
-            value=""
             required
           />
         </div>
@@ -22,7 +21,6 @@ const Forms = () => {
             type="text"
             id="bookTitle"
             name="bookTitle"
-            value=""
             required
           />
         </div>
