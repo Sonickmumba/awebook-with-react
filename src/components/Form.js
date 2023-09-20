@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 const Forms = () => {
-  const a = 'sonick';
   const [authorData, setAuthorData] = useState({
   });
 
