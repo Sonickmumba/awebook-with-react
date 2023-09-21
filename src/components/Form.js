@@ -18,14 +18,6 @@ const Forms = () => {
     storedAuthorData.push(authorData);
     localStorage.setItem('AuthorsBooks', JSON.stringify(storedAuthorData));
   };
-  useEffect(() => {
-    const button = document.getElementsByClassName('sub');
-    button.addEventListener('click', handleSubmit);
-
-    return () => {
-      button.removeEventListener('click', handleSubmit);
-    };
-  }, [handleSubmit]);
   return (
     <div className="form-container">
       <h2>
