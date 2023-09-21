@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 const display = () => {
   const a = "sonick"
+  const [book, setBook] = useState({});
   return (
     <div>{ a }</div>
   )
