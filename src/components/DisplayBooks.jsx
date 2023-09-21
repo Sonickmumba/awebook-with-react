@@ -5,6 +5,7 @@ const display = () => {
   const [book, setBook] = useState({});
 
   useEffect(() => {
+    const storedData = localStorage.getItem('storedAuthorData');
     
   })
   return (
