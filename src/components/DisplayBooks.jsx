@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const display = () => {
   const a = "sonick"
   const [book, setBook] = useState({});
 
+  useEffect(() => {
+    
+  })
   return (
     <div>
       <h2>Book Display</h2>
