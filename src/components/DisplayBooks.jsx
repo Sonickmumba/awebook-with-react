@@ -15,7 +15,7 @@ const Display = () => {
   return (
     <div>
       <h2>Book Display</h2>
-      <div id="books-div"></div>
+      <div id="books-div" />
     </div>
   );
 };
