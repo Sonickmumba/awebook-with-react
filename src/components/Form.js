@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Forms = () => {
   const [authorData, setAuthorData] = useState({
@@ -18,6 +18,14 @@ const Forms = () => {
     storedAuthorData.push(authorData);
     localStorage.setItem('AuthorsBooks', JSON.stringify(storedAuthorData));
   };
+  useEffect(() => {
+    const button = document.getElementsByClassName('sub');
+    button.addEventListener('click', handleSubmit);
+
+    return () => {
+      button.removeEventListener('click', handleSubmit);
+    };
+  }, [handleSubmit]);
   return (
     <div className="form-container">
       <h2>
@@ -45,7 +53,7 @@ const Forms = () => {
           />
         </div>
         <div className="form-group">
-          <button type="submit">Submit</button>
+          <button type="submit" className="sub">Submit</button>
         </div>
       </form>
     </div>
