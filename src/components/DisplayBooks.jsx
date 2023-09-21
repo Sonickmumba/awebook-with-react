@@ -6,8 +6,13 @@ const display = () => {
 
   useEffect(() => {
     const storedData = localStorage.getItem('storedAuthorData');
-    
-  })
+
+    if (storedData) {
+      const parsedData = JSON.parse(storedData);
+      setBook(parsedData);
+    }
+  }, []);
+  console.log(book);
   return (
     <div>
       <h2>Book Display</h2>
