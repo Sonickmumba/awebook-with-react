@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 const Display = () => {
   const [book, setBook] = useState([]);
-  const uniqueId = uuidv4();
+  // const uniqueId = uuidv4();
   useEffect(() => {
     const storedData = localStorage.getItem('AuthorsBooks');
 
@@ -15,17 +15,20 @@ const Display = () => {
   return (
     <div className="book-display-container">
       <h2 className="book-display-title">Book Display</h2>
-      <ul className="book-list">
+      <div className="book-list">
         {book.map((bo) => (
-          <li className="book-item" key={uniqueId}>
-            <p>
-              { bo.bookTitle }
-              by
-              { bo.authorName }
-            </p>
-          </li>
+          <div className="book-item" key={uuidv4()}>
+            <div className="details-div">
+              <span className="title">
+                { bo.bookTitle }
+              </span>
+              <span>by</span>
+              <span>{ bo.authorName }</span>
+            </div>
+            <button type="button" className="remove">Delete</button>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
