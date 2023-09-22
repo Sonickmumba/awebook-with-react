@@ -110,9 +110,13 @@ button[type="submit"]:hover {
 }
 
 .book-item {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  gap: 50px;
   font-size: 18px;
   color: #666;
-  margin: 5px 0;
+  margin: 20px 0;
 }
 
 
