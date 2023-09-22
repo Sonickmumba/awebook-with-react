@@ -5,8 +5,8 @@ import Display from './components/DisplayBooks';
 function App() {
   return (
     <div className="App">
-      <Display />
       <Forms />
+      <Display />
     </div>
   );
 }

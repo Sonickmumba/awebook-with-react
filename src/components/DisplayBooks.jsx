@@ -1,21 +1,26 @@
 import React, { useEffect, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 const Display = () => {
-  const [book, setBook] = useState({});
-
+  const [book, setBook] = useState([]);
+  const uniqueId = uuidv4();
+  const storedData = localStorage.getItem('AuthorBooks');
+  console.log(storedData);
   useEffect(() => {
-    const storedData = localStorage.getItem('storedAuthorData');
+    const storedData = localStorage.getItem('AuthorsBooks');
+    console.log(storedData);
 
     if (storedData) {
       const parsedData = JSON.parse(storedData);
       setBook(parsedData);
     }
-  }, []);
-  console.log(book);
+  }, [storedData]);
   return (
     <div>
       <h2>Book Display</h2>
-      <div id="books-div" />
+      {book.map((bo) => (
+        <li key={uniqueId}>{ bo.authorName }</li>
+      ))}
     </div>
   );
 };
