@@ -48,6 +48,9 @@ const Forms = () => {
           <button type="submit" className="sub">Submit</button>
         </div>
       </form>
+      {/* {setAuthorData ? (
+        <p>Form submitted successfully. Inputs have disappeared.</p>
+      ) : null} */}
     </div>
   );
 };
