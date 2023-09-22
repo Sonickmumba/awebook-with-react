@@ -85,3 +85,34 @@ button[type="submit"]:hover {
   color: #ff6600; /* Change the color on hover */
 }
 
+/* css for books container */
+
+/* Display.css (or your preferred CSS file) */
+
+.book-display-container {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.book-display-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.book-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.book-item {
+  font-size: 18px;
+  color: #666;
+  margin: 5px 0;
+}
+
+

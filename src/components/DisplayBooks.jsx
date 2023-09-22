@@ -16,11 +16,19 @@ const Display = () => {
     }
   }, [storedData]);
   return (
-    <div>
-      <h2>Book Display</h2>
-      {book.map((bo) => (
-        <li key={uniqueId}>{ bo.authorName }</li>
-      ))}
+    <div className="book-display-container">
+      <h2 className="book-display-title">Book Display</h2>
+      <ul className="book-list">
+        {book.map((bo) => (
+          <li className="book-item" key={uniqueId}>
+            <p>
+              {bo.bookTitle}
+              by
+              {bo.authorName}
+            </p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
