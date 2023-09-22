@@ -14,7 +14,7 @@ const Display = () => {
       const parsedData = JSON.parse(storedData);
       setBook(parsedData);
     }
-  }, [storedData]);
+  }, []);
   return (
     <div className="book-display-container">
       <h2 className="book-display-title">Book Display</h2>
@@ -22,9 +22,9 @@ const Display = () => {
         {book.map((bo) => (
           <li className="book-item" key={uniqueId}>
             <p>
-              {bo.bookTitle}
+              { bo.bookTitle }
               by
-              {bo.authorName}
+              { bo.authorName }
             </p>
           </li>
         ))}
