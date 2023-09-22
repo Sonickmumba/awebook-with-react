@@ -3,7 +3,6 @@ import { v4 as uuidv4 } from 'uuid';
 
 const Display = () => {
   const [book, setBook] = useState([]);
-  // const uniqueId = uuidv4();
   useEffect(() => {
     const storedData = localStorage.getItem('AuthorsBooks');
 
@@ -23,7 +22,7 @@ const Display = () => {
                 { bo.bookTitle }
               </span>
               <span className="title">by</span>
-              <span>{ bo.authorName }</span>
+              <span className="title">{ bo.authorName }</span>
             </div>
             <button type="button" className="remove">Delete</button>
           </div>
