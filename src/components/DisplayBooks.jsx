@@ -22,7 +22,7 @@ const Display = () => {
               <span className="title">
                 { bo.bookTitle }
               </span>
-              <span>by</span>
+              <span className="title">by</span>
               <span>{ bo.authorName }</span>
             </div>
             <button type="button" className="remove">Delete</button>

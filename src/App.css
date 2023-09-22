@@ -113,10 +113,13 @@ button[type="submit"]:hover {
   display: flex;
   align-items: center;
   justify-content:space-between;
-  gap: 50px;
   font-size: 18px;
   color: #666;
   margin: 20px 0;
+}
+
+.title {
+  margin: 0 4px;
 }
 
 
