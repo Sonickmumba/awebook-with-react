@@ -82,7 +82,7 @@ button[type="submit"]:hover {
 }
 
 .nav-item a:hover {
-  color: #ff6600; /* Change the color on hover */
+  color: #f60; /* Change the color on hover */
 }
 
 /* css for books container */
@@ -112,7 +112,7 @@ button[type="submit"]:hover {
 .book-item {
   display: flex;
   align-items: center;
-  justify-content:space-between;
+  justify-content: space-between;
   font-size: 18px;
   color: #666;
   border: 4px solid #ccc;
@@ -128,5 +128,3 @@ button[type="submit"]:hover {
   margin: 0 4px;
   font-size: 1rem;
 }
-
-
