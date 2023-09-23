@@ -28,7 +28,6 @@ const Forms = () => {
     document.getElementById('authorName').value = '';
     document.getElementById('bookTitle').value = '';
     // authorNameInput.value = '';
-    // bookTitleInput.value = '';
   };
   return (
     <div className="form-container">
