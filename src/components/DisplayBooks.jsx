@@ -6,7 +6,6 @@ const Display = () => {
 
   const handleDelete = (e) => {
     const updatedBooks = book.filter((boo) => Number(e.target.id) !== boo.id);
-    console.log(typeof e.target.id);
     setBook(updatedBooks);
     localStorage.setItem('AuthorsBooks', JSON.stringify(updatedBooks));
   };
