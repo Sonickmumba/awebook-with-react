@@ -31,6 +31,10 @@ const Forms = () => {
       authorName: '',
       bookTitle: '',
     });
+    const inp = document.getElementById('authorName');
+    const ol = document.getElementById('bookTitle');
+    inp.value = '';
+    ol.value = '';
   };
   return (
     <div className="form-container">
