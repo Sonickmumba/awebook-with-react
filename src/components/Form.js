@@ -27,7 +27,6 @@ const Forms = () => {
     // Clear the form inputs
     document.getElementById('authorName').value = '';
     document.getElementById('bookTitle').value = '';
-    // authorNameInput.value = '';
   };
   return (
     <div className="form-container">
