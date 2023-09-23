@@ -3,6 +3,12 @@ import { v4 as uuidv4 } from 'uuid';
 
 const Display = () => {
   const [book, setBook] = useState([]);
+
+  const handleDelete = (e) => {
+    const updatedBooks = book.filter((boo) => Number(e.target.id) !== boo.id);
+    setBook(updatedBooks);
+    localStorage.setItem('AuthorsBooks', JSON.stringify(updatedBooks));
+  };
   useEffect(() => {
     const storedData = localStorage.getItem('AuthorsBooks');
 
@@ -24,7 +30,7 @@ const Display = () => {
               <span className="title">by</span>
               <span className="title">{ bo.authorName }</span>
             </div>
-            <button type="button" className="remove">Delete</button>
+            <button type="button" id={bo.id} className="remove" onClick={handleDelete}>Delete</button>
           </div>
         ))}
       </div>

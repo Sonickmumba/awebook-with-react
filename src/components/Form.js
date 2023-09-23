@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 const Forms = () => {
   const [authorData, setAuthorData] = useState({
+    authorName: '',
+    bookTitle: '',
   });
 
   const handleInputChange = (e) => {
@@ -15,8 +17,18 @@ const Forms = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const storedAuthorData = JSON.parse(localStorage.getItem('AuthorsBooks')) || [];
-    storedAuthorData.push(authorData);
+    const newBook = {
+      id: new Date().getTime(), // Use a timestamp as a unique key
+      authorName: authorData.authorName,
+      bookTitle: authorData.bookTitle,
+    };
+    storedAuthorData.push(newBook);
     localStorage.setItem('AuthorsBooks', JSON.stringify(storedAuthorData));
+    // Clear the form inputs
+    const authorNameInput = document.getElementById('authorName');
+    const bookTitleInput = document.getElementById('bookTitle');
+    authorNameInput.value = '';
+    bookTitleInput.value = '';
   };
   return (
     <div className="form-container">
