@@ -27,10 +27,10 @@ const Forms = () => {
     storedAuthorData.push(newBook);
     localStorage.setItem('AuthorsBooks', JSON.stringify(storedAuthorData));
     // Clear the form inputs
-    const inp = document.getElementById('authorName');
-    const ol = document.getElementById('bookTitle');
-    inp.value = '';
-    ol.value = '';
+    const authorNameInput = document.getElementById('authorName');
+    const bookTitleInput = document.getElementById('bookTitle');
+    authorNameInput.value = '';
+    bookTitleInput.value = '';
   };
   return (
     <div className="form-container">
