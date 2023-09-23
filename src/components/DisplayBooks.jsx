@@ -10,7 +10,6 @@ const Display = () => {
     setBook(updatedBooks);
     localStorage.setItem('AuthorsBooks', JSON.stringify(updatedBooks));
   };
-  // console.log(book);
   useEffect(() => {
     const storedData = localStorage.getItem('AuthorsBooks');
 
