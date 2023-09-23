@@ -18,7 +18,6 @@ const Forms = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const storedAuthorData = JSON.parse(localStorage.getItem('AuthorsBooks')) || [];
-    // added
     const newBook = {
       id: new Date().getTime(), // Use a timestamp as a unique key
       authorName: authorData.authorName,
