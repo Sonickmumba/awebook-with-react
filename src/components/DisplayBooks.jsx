@@ -20,20 +20,20 @@ const Display = () => {
   return (
     <div className="book-display-container">
       <h2 className="book-display-title">Book Display</h2>
-      <div className="book-list">
+      <ul className="book-list">
         {book.map((bo) => (
-          <div className="book-item" key={uuidv4()}>
-            <div className="details-div">
+          <li className="book-item" key={uuidv4()}>
+            <div className="book-info">
               <span className="title">
                 { bo.bookTitle }
               </span>
-              <span className="title">by</span>
-              <span className="title">{ bo.authorName }</span>
+              <span className="separator">by</span>
+              <span className="author">{ bo.authorName }</span>
             </div>
             <button type="button" id={bo.id} className="remove" onClick={handleDelete}>Delete</button>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };
